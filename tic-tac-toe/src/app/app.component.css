@@ -1,0 +1,44 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.status {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+button {
+  font-size: 18px;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+}
+
+.row {
+  display: contents;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+}

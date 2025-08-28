@@ -1,0 +1,23 @@
+<main>
+  <h1>Tic-Tac-Toe</h1>
+
+  <div class="status" *ngIf="!winner && !isDraw">
+    Player {{ player }}'s turn
+  </div>
+  <div class="status" *ngIf="winner">
+    Player {{ winner }} won!
+  </div>
+  <div class="status" *ngIf="isDraw">
+    It's a Draw!
+  </div>
+
+  <button (click)="newGame()">New Game</button>
+
+  <div class="board">
+    <div class="row" *ngFor="let row of [0, 1, 2]">
+      <div class="square" *ngFor="let col of [0, 1, 2]" (click)="makeMove(row * 3 + col)">
+        {{ squares[row * 3 + col] }}
+      </div>
+    </div>
+  </div>
+</main>
